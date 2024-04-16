@@ -1,8 +1,5 @@
 import streamlit as st
 import pandas as pd
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file)
-  st.dataframe(df)
-
+df = pd.read_csv('ftp://ru3330@sb42000.sdedi.com/Downloads/title_basics_clean.csv', sep=",")
+df
