@@ -13,7 +13,7 @@ st.title("Bienvenue au cinéma RAJJ - Élu meilleur cinéma de la Creuse")
 st.image('https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6icZwgrEBHXeXMVaU.jpg', caption='Vous ne savez pas quoi regarder ?')
 
 
-
+st.subheader(
 st.title("ChatGPT-like clone")
 
 # Set OpenAI API key from Streamlit secrets
@@ -44,7 +44,7 @@ if prompt := st.chat_input("What is up?"):
             stream=True,
         )
         response = st.write_stream(stream)
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.session_state.messages.append({"role": "assistant", "content": response}))
 
 st.write("Merci d'utiliser notre menu de gauche pour accéder aux diverses pages de notre site.")
 st.sidebar.success("Faites votre choix pour naviguer sur le site. ☝️ ")
