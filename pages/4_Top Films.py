@@ -8,14 +8,14 @@ if uploaded_file is not None:
 
 
 select_office = sorted(df['title'].unique())
-  select_office_dropdown = st.sidebar.multiselect('Select one or multiple title to display data:', select_office)
-  select_year_range = reversed(sorted(df['startYear'].unique()))
-  yearmax = df['startYear'].max()
-  yearmin = df['startYear'].min()
-  select_year_slider = st.sidebar.select_slider('Use slider to display year range:', options=select_year_range, value=(yearmax, yearmin))
-  startyear, endyear = list(select_year_slider)[0], list(select_year_slider)[1]
+select_office_dropdown = st.sidebar.multiselect('Select one or multiple title to display data:', select_office)
+select_year_range = reversed(sorted(df['startYear'].unique()))
+yearmax = df['startYear'].max()
+yearmin = df['startYear'].min()
+select_year_slider = st.sidebar.select_slider('Use slider to display year range:', options=select_year_range, value=(yearmax, yearmin))
+startyear, endyear = list(select_year_slider)[0], list(select_year_slider)[1]
     
-  selected_office_year = df[(df.Office.isin(select_office_dropdown)) & ((df.Year <= startyear) & (df.Year >= endyear))]
+selected_office_year = df[(df.Office.isin(select_office_dropdown)) & ((df.Year <= startyear) & (df.Year >= endyear))]
     
-  st.map(selected_office_year)
-  st.dataframe(selected_office_year.reset_index(drop=True))
+st.map(selected_office_year)
+st.dataframe(selected_office_year.reset_index(drop=True))
