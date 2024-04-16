@@ -32,7 +32,7 @@ with st.sidebar:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
     
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("Votre recherche ici"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
