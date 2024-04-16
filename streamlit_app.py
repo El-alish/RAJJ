@@ -14,6 +14,7 @@ st.image('https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6i
 
 
 with st.sidebar:
+    st.sidebar.success("Faites votre choix pour naviguer sur le site. ☝️ ")
     st.title("Notre assistant est là pour vous aider dans vos recherches:")
     st.write("Posez des questions à notre ChatGPT maison")
     st.write("Exemple : Quels sont les acteurs du film Batman?")
@@ -50,4 +51,4 @@ with st.sidebar:
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 st.write("Merci d'utiliser notre menu de gauche pour accéder aux diverses pages de notre site.")
-st.sidebar.success("Faites votre choix pour naviguer sur le site. ☝️ ")
+
