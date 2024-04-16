@@ -17,7 +17,7 @@ with st.sidebar:
     st.sidebar.success("Cliquez sur les onglets pour naviguer.☝️ ")
     st.write("Notre assistant est là pour vous aider dans vos recherches. Posez des questions à notre ChatGPT maison")
     st.write("Exemple : Quels sont les acteurs du film Batman?")
-    st.write("C'est à vous!")
+    st.write("C'est à vous!👇")
     
     # Set OpenAI API key from Streamlit secrets
     client = OpenAI(api_key=st.secrets["open_ai_key"])
