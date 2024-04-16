@@ -4,18 +4,18 @@ import numpy as np
 from openai import OpenAI
 
 st.set_page_config(
-    page_title="RAJJ - Cinema",
+    page_title="Au Grand RAJJ - Cinema",
     page_icon="⭐",
 )
        
-st.title("Bienvenue au cinéma RAJJ - Élu meilleur cinéma de la Creuse")
+st.title("Bienvenue 'Au Grand RAJJ' - Élu meilleur cinéma de la Creuse")
 
 st.image('https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6icZwgrEBHXeXMVaU.jpg', caption='Vous ne savez pas quoi regarder ?')
 
 
 with st.sidebar:
     st.sidebar.success("Faites votre choix pour naviguer sur le site. ☝️ ")
-    st.title("Notre assistant est là pour vous aider dans vos recherches:")
+    st.write("Notre assistant est là pour vous aider dans vos recherches:")
     st.write("Posez des questions à notre ChatGPT maison")
     st.write("Exemple : Quels sont les acteurs du film Batman?")
     st.write("C'est à vous!")
