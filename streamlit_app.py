@@ -8,6 +8,16 @@ st.set_page_config(
     page_icon="⭐",
 )
        
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Bienvenue 'Au Grand RAJJ' - Élu meilleur cinéma de la Creuse")
 
 st.image('https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6icZwgrEBHXeXMVaU.jpg', caption='Vous ne savez pas quoi regarder ?')
