@@ -7,7 +7,7 @@ if uploaded_file is not None:
   st.write(df)
 
 
-select_office = sorted(df['title'].unique())
+select_office = sorted(df['primartyTitle'].unique())
 select_office_dropdown = st.sidebar.multiselect('Select one or multiple title to display data:', select_office)
 select_year_range = reversed(sorted(df['startYear'].unique()))
 yearmax = df['startYear'].max()
