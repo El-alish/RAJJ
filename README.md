@@ -4,7 +4,7 @@ Projet 2 dans le cadre de ma formation de Data Analyst au sein de la Wild Code S
 
 ## Fait avec Python/Pandas/Streamlit 
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://openai-chatbot.streamlit.app/)
+
 
 ## Prerequisite libraries
 
