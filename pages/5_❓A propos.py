@@ -11,7 +11,7 @@ df = pd.DataFrame({
     "col4": np.random.rand(1000, 4).tolist(),
 })
 
-tab1, tab2, tab3 = st.tabs(["Accès", "Nos tarifs", "Nos horaires"])
+tab1, tab2, tab3, tab4 = st.tabs(["Accès", "Nos tarifs", "Nos horaires", "Contact"])
 with tab1:
     st.write("Comment accéder à notre cinéma ?")
     st.write("Notre adresse :")
@@ -22,12 +22,29 @@ with tab1:
 
 with tab2:
     st.subheader("Nos tarifs")
-    st.write("Tarif normal : 10€")
-    st.write("Tarif réduit (France-Travail ou Handicapé) : 8€")
-    st.write("Tarif - de 16 ans : 6€")
-    st.write("Tarif enfant : 4€")
+    col0, col1, col2, col3 = st.columns(4)
+    with col0:
+        container = st.container(border=False)
+        container.image("RAJJ-master\Images\Capture d'écran 2024-05-23 160027.png")
+    with col1:
+        container = st.container(border=False)
+        container.image("RAJJ-master\Images\Capture d'écran 2024-05-23 160040.png")
+    with col2:
+        container = st.container(border=False)
+        container.image("RAJJ-master\Images\Capture d'écran 2024-05-23 160050.png")
+    with col3:
+        container = st.container(border=False)
+        container.image("RAJJ-master\Images\Capture d'écran 2024-05-23 160110.png")
 
 with tab3:
-    st.subheader("Nos horaires")
-    st.write("Lundi au Vendredi : 12h30 - Minuit")
-    st.write("Week-end : 10h - Minuit")
+        container = st.container(border=False)
+        container.image("RAJJ-master\Images\Horaire.png")
+
+with tab4:
+    st.subheader("Comment nous contacter ?")
+    st.write("Téléphone : 08 35 65 65 65")
+    st.write("Mail : augrandrajj@gueret.fr")
+    st.write("Nos Réseaux Sociaux :")
+    st.write("[Facebook](https://www.facebook.com/)")
+    st.write("[Twitter](https://twitter.com/)")
+    st.write("[Instagram](https://www.instagram.com/)")
