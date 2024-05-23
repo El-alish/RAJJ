@@ -1,6 +1,6 @@
 # 🤖💬 OpenAI Chatbot
 
-A conversational chatbot built in Python using Streamlit and the OpenAI LLM model GPT 3.5.
+Projet 2 dans le cadre de ma formation de Data Analyst au sein de la Wild Code School, Février 2024 à Juillet 2024
 
 ## Demo App
 
@@ -11,6 +11,9 @@ A conversational chatbot built in Python using Streamlit and the OpenAI LLM mode
 ```
 streamlit
 openai
+pandas
+datetime
+from deep_translator import GoogleTranslator
 ```
 
 ## Get an OpenAI API key
