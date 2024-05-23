@@ -39,24 +39,24 @@ with tab2:
 
     with col1:
         st.subheader("[Alain Recuze](https://www.linkedin.com/in/arecuze/)")
-        st.image("RAJJ-master\Alain.png")
+        st.image("RAJJ-master\Images\Alain.png")
         
     with col2:
         st.subheader("[Joseph Gouttin](https://www.linkedin.com/in/josephgouttin/)")
-        st.image("RAJJ-master\Joseph.png")
+        st.image("RAJJ-master\Images\Joseph.png")
     
     with col3:
         st.subheader("[Julian Rudeau](https://www.linkedin.com/in/julian-rudeau-7163a8a9/)")
-        st.image("RAJJ-master\Julian.png")
+        st.image("RAJJ-master\Images\Julian.png")
     
     with col4:
         st.subheader("[Roberto Kwadjanie](https://www.linkedin.com/in/roberto-kwadjanie-8b6719127/)")
-        st.image("RAJJ-master\Roberto.png")
+        st.image("RAJJ-master\Images\Roberto.png")
         st.write("[Source création d'Avatar](https://stan-leigh-avatar-maker-app-avatar-app-4f6sov.streamlit.app/)")
 
 
 with st.sidebar:
-    st.image('RAJJ-master\chatbot.png')
+    st.image('RAJJ-master\Images\chatbot.png')
     #st.sidebar.success("Cliquez sur les onglets pour naviguer☝️ ")
     st.write("Notre assistant GPT est là pour vous aider dans vos recherches. Posez vos questions à notre ChatGPT maison.")
     st.write("Exemple : Quels sont les meilleurs films Français? 👇")
