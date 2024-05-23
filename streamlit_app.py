@@ -1,33 +1,65 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from openai import OpenAI
+from openai import OpenAI # type: ignore
 
 st.set_page_config(
     page_title="Au Grand RAJJ - Cinema",
     page_icon="⭐",
+    layout = "wide"
 )
-       
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
+st.title('Au Grand RAJJ - Cinéma au coeur de la Creuse')
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("Bienvenue 'Au Grand RAJJ' - Élu meilleur cinéma de la Creuse")
+st.markdown(
+    """
+    <style>
+        [data-testid=stSidebar] [data-testid=stImage]{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
 
-st.image('https://t4.ftcdn.net/jpg/04/46/93/93/360_F_446939375_83iP0UYTg5F9vHl6icZwgrEBHXeXMVaU.jpg', caption='Vous ne savez pas quoi regarder ?')
+st.subheader("Bienvenue ! Merci d'utiliser les onglets de notre menu de gauche pour naviguer.")       
+tab1, tab2 = st.tabs(["Accueil", "L'équipe derrière le projet"])
+with tab1:
+    #st.image('https://www.jolie-bobine.fr/wp-content/uploads/2022/03/Animated-Films-Letterboxd-Featured.jpeg')
+    st.image('https://www.purevpn.com/wp-content/uploads/2021/09/Binge-watch-movies-banner.jpg')
+    st.write('')
+
+
+with tab2:
+    st.title("Projet Recommandations De Films")
+    st.write("Projet réalisé dans le cadre de la formation BootCamp Data Analyst, au sein de l'école de formation Wild Code School, en full remote.")
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.subheader("[Alain Recuze](https://www.linkedin.com/in/arecuze/)")
+        st.image("RAJJ-master\Alain.png")
+        
+    with col2:
+        st.subheader("[Joseph Gouttin](https://www.linkedin.com/in/josephgouttin/)")
+        st.image("RAJJ-master\Joseph.png")
+    
+    with col3:
+        st.subheader("[Julian Rudeau](https://www.linkedin.com/in/julian-rudeau-7163a8a9/)")
+        st.image("RAJJ-master\Julian.png")
+    
+    with col4:
+        st.subheader("[Roberto Kwadjanie](https://www.linkedin.com/in/roberto-kwadjanie-8b6719127/)")
+        st.image("RAJJ-master\Roberto.png")
+        st.write("[Source création d'Avatar](https://stan-leigh-avatar-maker-app-avatar-app-4f6sov.streamlit.app/)")
 
 
 with st.sidebar:
-    st.sidebar.success("Cliquez sur les onglets pour naviguer.☝️ ")
-    st.write("Notre assistant est là pour vous aider dans vos recherches. Posez des questions à notre ChatGPT maison")
-    st.write("Exemple : Quels sont les acteurs du film Batman?")
-    st.write("C'est à vous!👇")
+    st.image('RAJJ-master\chatbot.png')
+    #st.sidebar.success("Cliquez sur les onglets pour naviguer☝️ ")
+    st.write("Notre assistant GPT est là pour vous aider dans vos recherches. Posez vos questions à notre ChatGPT maison.")
+    st.write("Exemple : Quels sont les meilleurs films Français? 👇")
     
     # Set OpenAI API key from Streamlit secrets
     client = OpenAI(api_key=st.secrets["open_ai_key"])
@@ -58,6 +90,3 @@ with st.sidebar:
             )
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
-
-st.write("Merci d'utiliser notre menu de gauche pour accéder aux diverses pages de notre site.")
-

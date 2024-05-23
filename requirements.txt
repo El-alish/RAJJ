@@ -1,3 +1,14 @@
 streamlit
 openai
 pandas
+matplotlib
+time
+streamlit.components.v1
+numpy
+plotly.express
+plotly.graph_objects 
+plotly.figure_factory
+plotly.offline
+wordcloud
+langdetect
+datetime
